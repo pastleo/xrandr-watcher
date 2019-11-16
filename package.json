@@ -1,0 +1,21 @@
+{
+  "name": "xrandr-watcher",
+  "version": "0.1.0",
+  "description": "xrandr event watcher",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --experimental-modules ./index.js ./example-handler.sh",
+    "build-dev": "NODE_ENV=development webpack",
+    "build": "NODE_ENV=production webpack"
+  },
+  "author": "PastLeo",
+  "license": "MIT",
+  "dependencies": {
+    "x11": "^2.3.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
