@@ -45,6 +45,8 @@ try {
   printHelpAndDie(err);
 }
 
+printStdout(`handlerScript: ${handlerScript}`);
+
 const resultCb2 = (job) => (
   new Promise((resolve, reject) => job((err, result) => {
     if (err) { reject(err); }
