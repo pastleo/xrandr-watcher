@@ -7,10 +7,10 @@ xrandr event watcher
 
 ## Setup
 
-on ArchLinux, use AUR helper [yay](https://github.com/Jguer/yay.git) to install
+on ArchLinux, use AUR helper [yay](https://github.com/Jguer/yay.git) to install [xrandr-watch](https://aur.archlinux.org/packages/xrandr-watch-git/)
 
 ```bash
-yay -S xrandr-watcher-git
+yay -S xrandr-watch-git
 ```
 
 this AUR includes a user system unit `xrandr-watcher.service`:
