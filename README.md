@@ -3,9 +3,9 @@ xrandr event watcher
 
 ## Requirements
 
-* `nodejs` (I use `12.10.0` during development)
+* `nodejs` (I use `12.10.0` during build and development)
 
-## build
+## Build
 
 ```bash
 git clone git@github.com:pastleo/xrandr-watcher.git
@@ -15,7 +15,16 @@ make
 
 then `./xrandr-watcher` is the built executable
 
-## development
+## Usage
+
+```
+xrandr-watcher path/to/handler/script [notifyMask]
+
+  path/to/handler/script should have execution permission
+  notifyMask is by default ScreenChange, and can be one of All, ScreenChange, CrtcChange, OutputChange, OutputProperty
+```
+
+## Development
 
 ```bash
 git clone git@github.com:pastleo/xrandr-watcher.git
