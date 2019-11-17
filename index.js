@@ -23,11 +23,14 @@ const consoleDebug = (
   process.env.NODE_ENV === 'production' ? (() => null) : console.debug
 )
 
-const printHelpAndDie = why => {
+const printAndDie = why => {
   process.stderr.write('Error: ');
   printStderr(why.toString());
-  process.stderr.write(helpTexts);
   process.exit(1);
+};
+
+const printHelpAndDie = why => {
+  printAndDie([why, helpTexts].join('\n'))
 };
 
 if (process.env.XRANDR_DEFAULT_HANDLER_SCRIPT && !fs.existsSync(handlerScript)) {
@@ -54,7 +57,7 @@ const resultCb2 = (job) => (
   }))
 );
 
-(async () => {
+const startXrandrWatcher = async () => {
   printStdout('xrandr-watcher starting');
 
   const display = await resultCb2(X11.createClient);
@@ -124,4 +127,10 @@ const resultCb2 = (job) => (
   });
 
   printStdout('xrandr-watcher started');
-})();
+}
+
+if (process.env.DISPLAY && process.env.XAUTHORITY) {
+  startXrandrWatcher()
+} else {
+  printAndDie('Environment variables DISPLAY or XAUTHORITY are required')
+}

@@ -10,7 +10,7 @@ xrandr-watcher: xrandr-watcher.js
 	chmod +x xrandr-watcher
 
 clean:
-	rm -f xrandr-watcher.js xrandr-watcher
+	rm -rf xrandr-watcher.js xrandr-watcher
 
 # .PHONY steps that are not an actual file to be build
 .PHONY: build clean
