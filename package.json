@@ -2,7 +2,6 @@
   "name": "xrandr-watcher",
   "version": "0.1.0",
   "description": "xrandr event watcher",
-  "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "node --experimental-modules ./index.js ./example-handler.sh",
