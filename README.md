@@ -3,7 +3,7 @@ xrandr event watcher
 
 ## Requirements
 
-* `nodejs` (I use `12.10.0` during build and development)
+* `nodejs` (v13 is required for building and development)
 
 ## Setup
 
