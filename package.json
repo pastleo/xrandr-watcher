@@ -5,9 +5,9 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node --experimental-modules ./index.js ./example-handler.sh",
-    "build-dev": "NODE_ENV=development webpack",
-    "build": "NODE_ENV=production webpack"
+    "start": "node ./index.js ./example-handler.sh",
+    "build-dev": "NODE_ENV=development webpack --config webpack.config.cjs",
+    "build": "NODE_ENV=production webpack --config webpack.config.cjs"
   },
   "author": "PastLeo",
   "license": "MIT",
@@ -15,7 +15,7 @@
     "x11": "^2.3.0"
   },
   "devDependencies": {
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
   }
 }
