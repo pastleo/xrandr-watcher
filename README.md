@@ -36,6 +36,8 @@ journalctl --user-unit=xrandr-watcher.service -f # change screen setting to see 
 systemctl --user enable xrandr-watcher.service
 ```
 
+PS : The `PKGBUILD` file and the `xrandr-watcher.service` are in the [master branch](https://github.com/pastleo/xrandr-watcher/tree/master).
+
 ## Commandline Usage
 
 ```
